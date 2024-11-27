@@ -4,8 +4,10 @@
 int get_letter_value (char c)
 {
 	
-    if (c >= 'a' && c <= 'z') c -= 32;
-    if (c >= 'A' && c <= 'Z') {
+    if (c >= 'a' && c <= 'z') 
+		c = c - 32;
+    if (c >= 'A' && c <= 'Z') 
+	{
         int letter_values[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
         return letter_values[c - 'A'];
     }
@@ -25,11 +27,13 @@ void test(char *str1, char *str2)
 	while (str1[i] != '\0')
 	{
 		score1 = score1 + get_letter_value(str1[i]);
+		i++;
 	}
 	i = 0;
 	while (str2[i] != '\0')
 	{
 		score2 = score2 + get_letter_value(str2[i]);
+		i++;
 	}
 
 	if (score1 > score2)
@@ -43,6 +47,6 @@ void test(char *str1, char *str2)
 int main()
 {
 	char *str1 = get_string ("Player 1: ");
-	char *str2 = get_string ("player 2: ");
-	test;
+	char *str2 = get_string ("Player 2: ");
+	test(str1, str2);
 }
