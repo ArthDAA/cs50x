@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: Very fast when it's already sorted
+
+sort2 uses: Merge
+
+How do you know?: The fastest on bigger files, and a constent time regardless of the sorting state of the chosen list.
+
+sort3 uses: Selection
+
+How do you know?: Constent times following the quantity of numbers to sort
